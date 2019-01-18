@@ -1,0 +1,30 @@
+{
+  "apps":[
+    {
+      "name": "xsp-magear",
+      "instances": 2, //启动进程数，建议1 到 最大核心数量减1
+      "exec_mode": "cluster",
+//      "cwd": "",
+      "script": "lib/xsp.js",
+//      "args": ["config=config"],
+      "watch": [  //监控变化的目录，一旦变化，自动重启
+        "conf","helper","lib","scripts"
+      ],
+      "ignore_watch": [  //从监控目录中排除
+        "node_modules",
+        "logs",
+        "pc_route"
+      ],
+      "watch_options": {
+        "usePolling": true
+      },
+      "node_args": "--harmony"
+//      "min_uptime": "60s",
+//      "max_restarts": 30,
+//      "merge_logs": true,
+//      "error_file": "logs/xsp-err.log",
+//      "out_file": "logs/xsp-out.log",
+//      "pid_file": "logs/xsp.pid"
+    }
+  ]
+}

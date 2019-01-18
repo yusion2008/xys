@@ -1,0 +1,32 @@
+{
+  "name": "xys",
+  "version": "1.0.2",
+  "description": "a tool for dev xsp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "xys": "bin/x.js"
+  },
+  "keywords": [
+    "cli",
+    "xsp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusion2008/xys.git"
+  },
+  "author": "xieyongshuang",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "fs-extra": "^7.0.1",
+    "path": "^0.12.7",
+    "through2": "^3.0.0",
+    "vinyl-fs": "^3.0.3",
+    "which": "^1.3.1"
+  },
+  "homepage": "https://github.com/yusion2008/xys"
+}
