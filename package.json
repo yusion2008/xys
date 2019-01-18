@@ -1,6 +1,6 @@
 {
   "name": "xys",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a tool for dev xsp",
   "main": "index.js",
   "scripts": {

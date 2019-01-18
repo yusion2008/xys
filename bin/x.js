@@ -11,27 +11,27 @@ const chalk = require('chalk');
 const fs = require('fs-extra');
 const path = require('path');
 
-let v=`
+const v=`
 --------------------------------------------------
---\\\--------///---\\\--------///-----////\\\\----
----\\\------///-----\\\------///----///------\\\--
-----\\\----///-------\\\----///----|||------------
------\\\--///---------\\\--///------\\\-----------
-------\\\///-----------\\\///---------\\\||\\\----
-------///\\\------------||||-----------------\\\--
------///--\\\-----------||||------------------|||-
-----///----\\\----------||||------\\\---------///-
----///------\\\---------||||-------\\\-------///--
---///--------\\\--------||||---------\\\\\/////---
+--${chalk.green('\\\\\\')}--------${chalk.green('///')}---${chalk.green('\\\\\\')}--------${chalk.green('///')}-----${chalk.green('////\\\\\\\\')}----
+---${chalk.green('\\\\\\')}------${chalk.green('///')}-----${chalk.green('\\\\\\')}------${chalk.green('///')}----${chalk.green('///')}------${chalk.green('\\\\\\')}--
+----${chalk.green('\\\\\\')}----${chalk.green('///')}-------${chalk.green('\\\\\\')}----${chalk.green('///')}----${chalk.green('|||')}------------
+-----${chalk.green('\\\\\\')}--${chalk.green('///')}---------${chalk.green('\\\\\\')}--${chalk.green('///')}------${chalk.green('\\\\\\')}-----------
+------${chalk.green('\\\\\\')}${chalk.green('///')}-----------${chalk.green('\\\\\\')}${chalk.green('///')}---------${chalk.green('\\\\\\||\\\\\\')}----
+------${chalk.green('///')}${chalk.green('\\\\\\')}------------${chalk.green('||||')}-----------------${chalk.green('\\\\\\')}--
+-----${chalk.green('///')}--${chalk.green('\\\\\\')}-----------${chalk.green('||||')}------------------${chalk.green('|||')}-
+----${chalk.green('///')}----${chalk.green('\\\\\\')}----------${chalk.green('||||')}------${chalk.green('\\\\\\')}---------${chalk.green('///')}-
+---${chalk.green('///')}------${chalk.green('\\\\\\')}---------${chalk.green('||||')}-------${chalk.green('\\\\\\')}-------${chalk.green('///')}--
+--${chalk.green('///')}--------${chalk.green('\\\\\\')}--------${chalk.green('||||')}---------${chalk.green('\\\\\\\\\\/////')}---
 --------------------------------------------------
 `;
 
-
+const ver=chalk.green('v')+chalk.red(require('../package').version);
 
 
 // 定义版本和参数选项
 program
-    .version(v + '\nv' + require('../package').version)
+    .version(v + '\n' + ver,'-v, --version')
     .option('-i --init [name]', 'init a xsp Env')
     .option('-p, --project [name]', 'create a xsp project')
     .option('-c, --create [name]', 'create a xsp page');
